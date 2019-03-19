@@ -2,12 +2,12 @@
 Vanilla js form element duplicator
 
 # Kullanım
-Sayfanıza ekleyin\
+Sayfanıza ekleyin
 ```html
 <script src="form-element-duplicator.min.js"></script>
 ```
 
-Çoğaltmak istediğiniz input / select için bir çoğaltma butonu ekleyin\
+Çoğaltmak istediğiniz input / select için bir çoğaltma butonu ekleyin
 ```html
 <button type="button" onclick="duplicator.add({ selector: `[name='phone[]']`, maxCount: 10 })">Add</button>
 ```
