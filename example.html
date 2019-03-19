@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form Element Duplicator</title>
+</head>
+<body>
+<div>
+	<form>
+		<div class="input-group">
+			<label for="phone">Phone</label>
+			<input id="phone" type="text" name="phone[]">
+			<button type="button" onclick="duplicator.add({ selector: `[name='phone[]']`, maxCount: 10 })">Add</button>
+		</div>
+		<div class="input-group">
+			<label for="url">URL</label>
+			<input id="url" type="text" name="url[]">
+			<button type="button" onclick="duplicator.add('[name=\'url[]\']', '.url-inputs')">Add</button>
+			<div class="url-inputs"></div>
+		</div>
+		<div class="input-group">
+			<label for="address">Address Line</label>
+			<input id="address" type="text" name="address[]">
+			<button type="button" onclick="duplicator.add({ selector: `[name='address[]']`, maxCount: 3, removeButton: { html: `<strong>Delete</strong> Please` } })">Add</button>
+		</div>
+		<div class="input-group">
+			<label for="city">City</label>
+			<select id="city" name="city[]">
+				<option value="test1">Test 1</option>
+				<option value="test2">Test 2</option>
+				<option value="test3">Test 3</option>
+				<option value="test4">Test 4</option>
+			</select>
+			<button type="button" onclick="duplicator.add({ selector: `[name='city[]']`, maxCount: 3, removeButton: false })">Add</button>
+		</div>
+		<div class="input-group">
+			<label for="country">Country</label>
+			<select id="country" name="country[]">
+				<option value="test1">Test 1</option>
+				<option value="test2">Test 2</option>
+				<option value="test3">Test 3</option>
+				<option value="test4">Test 4</option>
+			</select>
+			<button type="button" onclick="duplicator.add({ selector: `[name='country[]']`, removeButton: false })">Add</button>
+			<button type="button" onclick="duplicator.removeBySelector(`[name='country[]']`)">Remove</button>
+		</div>
+	</form>
+</div>
+<script src="form-element-duplicator.min.js"></script>
+</body>
+</html>
