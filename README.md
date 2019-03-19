@@ -3,10 +3,14 @@ Vanilla js form element duplicator
 
 # Kullanım
 Sayfanıza ekleyin\
-`<script src="form-element-duplicator.min.js"></script>`
+```html
+<script src="form-element-duplicator.min.js"></script>
+```
 
 Çoğaltmak istediğiniz input / select için bir çoğaltma butonu ekleyin\
-`<button type="button" onclick="duplicator.add({ selector: `[name='phone[]']`, maxCount: 10 })">Add</button>`
+```html
+<button type="button" onclick="duplicator.add({ selector: `[name='phone[]']`, maxCount: 10 })">Add</button>
+```
 
 Selector olarak querySelector'e verilebilecek tüm parametreler çalışacaktır. Class select, id select, attribute select gibi selectorler kullanılabilir.
 
